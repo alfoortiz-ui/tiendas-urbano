@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendas Urbano | Admin</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<div th:replace="~{fragments/topbar :: topbar}"></div>
+<main class="section">
+    <div class="container admin-layout">
+        <aside class="admin-sidebar">
+            <h2>Panel administrativo</h2>
+            <nav>
+                <a href="#">Resumen</a>
+                <a href="#">Productos</a>
+                <a href="#">Stock</a>
+                <a href="#">Pedidos</a>
+            </nav>
+        </aside>
+        <section class="admin-content">
+            <h1>Dashboard</h1>
+            <p>Diseño base sobrio para gestión demostrativa de productos y pedidos.</p>
+        </section>
+    </div>
+</main>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

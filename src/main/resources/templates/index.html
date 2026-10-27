@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendas Urbano | Moda Femenina</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<div th:replace="~{fragments/topbar :: topbar}"></div>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <p class="eyebrow">Nueva temporada</p>
+                <h1>Tu estilo, tu esencia</h1>
+                <p>Explora una selección de prendas femeninas importadas con diseño contemporáneo y acabados premium para tus looks urbanos.</p>
+                <a class="btn btn-primary" th:href="@{/catalog}">Explorar colección</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Modelo vistiendo colección urbana femenina">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Categorías destacadas</h2>
+            </div>
+            <div class="card-grid categories">
+                <article class="card category-card"><img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=900&q=80" alt="Poleras"><div class="card-body"><h3>Poleras</h3><a th:href="@{/catalog}">Explorar</a></div></article>
+                <article class="card category-card"><img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=900&q=80" alt="Blazers"><div class="card-body"><h3>Blazers</h3><a th:href="@{/catalog}">Explorar</a></div></article>
+                <article class="card category-card"><img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=900&q=80" alt="Pantalones"><div class="card-body"><h3>Pantalones</h3><a th:href="@{/catalog}">Explorar</a></div></article>
+                <article class="card category-card"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Parkas y chaquetas"><div class="card-body"><h3>Parkas y chaquetas</h3><a th:href="@{/catalog}">Explorar</a></div></article>
+                <article class="card category-card"><img src="https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&w=900&q=80" alt="Trajes de baño"><div class="card-body"><h3>Trajes de baño</h3><a th:href="@{/catalog}">Explorar</a></div></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cream">
+        <div class="container">
+            <div class="section-head">
+                <h2>Productos destacados</h2>
+            </div>
+            <div class="card-grid products">
+                <article class="card product-card">
+                    <span class="tag">Destacado</span>
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Blazer sastrero">
+                    <div class="card-body"><p class="category">Blazers</p><h3>Blazer sastrero</h3><p class="price">$59.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                </article>
+                <article class="card product-card">
+                    <span class="tag">Nuevo</span>
+                    <img src="https://images.unsplash.com/photo-1551163943-3f7e29e0beae?auto=format&fit=crop&w=900&q=80" alt="Polera básica premium">
+                    <div class="card-body"><p class="category">Poleras</p><h3>Polera básica premium</h3><p class="price">$24.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                </article>
+                <article class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1603251579431-8041402bdeda?auto=format&fit=crop&w=900&q=80" alt="Pantalón de vestir">
+                    <div class="card-body"><p class="category">Pantalones</p><h3>Pantalón de vestir</h3><p class="price">$39.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                </article>
+                <article class="card product-card">
+                    <span class="tag tag-offer">Oferta</span>
+                    <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=900&q=80" alt="Chaqueta urbana">
+                    <div class="card-body"><p class="category">Chaquetas</p><h3>Chaqueta urbana</h3><p class="price">$49.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                </article>
+                <article class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=900&q=80" alt="Parka de invierno">
+                    <div class="card-body"><p class="category">Parkas</p><h3>Parka de invierno</h3><p class="price">$79.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                </article>
+                <article class="card product-card">
+                    <span class="tag">Nuevo</span>
+                    <img src="https://images.unsplash.com/photo-1564510182791-29645da7fac4?auto=format&fit=crop&w=900&q=80" alt="Traje de baño">
+                    <div class="card-body"><p class="category">Trajes de baño</p><h3>Traje de baño</h3><p class="price">$34.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section promo">
+        <div class="container promo-grid">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="Colección de temporada urbana">
+            <div>
+                <p class="eyebrow">Colección de temporada</p>
+                <h2>Piezas claves para tu clóset urbano</h2>
+                <p>Selección demostrativa de prendas versátiles para combinar elegancia y comodidad.</p>
+                <a class="btn btn-primary" th:href="@{/catalog}">Descubrir colección</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section benefits">
+        <div class="container benefits-grid">
+            <article><h3>Compra online</h3><p>Catálogo demostrativo para explorar productos y combinaciones.</p></article>
+            <article><h3>Opciones de despacho</h3><p>Contenido de ejemplo sujeto a definición académica del proyecto.</p></article>
+            <article><h3>Pago simulado seguro</h3><p>Sin cobros reales ni almacenamiento de datos bancarios.</p></article>
+            <article><h3>Atención al cliente</h3><p>Canales demostrativos de contacto para pruebas de la interfaz.</p></article>
+        </div>
+    </section>
+
+    <section class="section newsletter">
+        <div class="container newsletter-box">
+            <h2>Recibe novedades de Tiendas Urbano</h2>
+            <form id="newsletter-form" novalidate>
+                <label for="newsletter-email" class="sr-only">Correo electrónico</label>
+                <input id="newsletter-email" type="email" placeholder="Ingresa tu correo" required>
+                <button type="submit" class="btn btn-primary">Suscribirse</button>
+            </form>
+            <p id="newsletter-feedback" class="feedback" aria-live="polite"></p>
+        </div>
+    </section>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
