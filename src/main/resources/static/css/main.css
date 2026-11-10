@@ -213,12 +213,38 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); }
 .site-footer li { margin-bottom: .4rem; }
 
 .placeholder-page,
-.admin-content {
+.admin-content,
+.form-page,
+.product-detail {
     background: var(--white);
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 1.5rem;
 }
+.form-page { max-width: 560px; }
+.form-page form { display: grid; gap: .55rem; }
+.form-page input,
+.catalog-filters input {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: .7rem;
+    font: inherit;
+}
+.form-page .btn { margin-top: .6rem; }
+.form-error { color: #a3213a; }
+.form-success { color: #176b43; }
+.catalog-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: .65rem;
+    margin-bottom: 1.5rem;
+}
+.catalog-filters label:not(.checkbox-label) { width: 100%; }
+.catalog-filters input[type="search"],
+.catalog-filters input[type="text"] { flex: 1 1 220px; }
+.checkbox-label { display: flex; align-items: center; gap: .35rem; padding: .7rem 0; }
+.checkbox-label input { width: auto; }
 .admin-layout {
     display: grid;
     grid-template-columns: 280px 1fr;

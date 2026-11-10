@@ -49,30 +49,30 @@
                 <article class="card product-card">
                     <span class="tag">Destacado</span>
                     <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Blazer sastrero">
-                    <div class="card-body"><p class="category">Blazers</p><h3>Blazer sastrero</h3><p class="price">$59.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                    <div class="card-body"><p class="category">Blazers</p><h3>Blazer sastrero</h3><p class="price">$59.990 CLP</p><a class="btn btn-outline" th:href="@{/catalog}">Ver catálogo</a></div>
                 </article>
                 <article class="card product-card">
                     <span class="tag">Nuevo</span>
                     <img src="https://images.unsplash.com/photo-1551163943-3f7e29e0beae?auto=format&fit=crop&w=900&q=80" alt="Polera básica premium">
-                    <div class="card-body"><p class="category">Poleras</p><h3>Polera básica premium</h3><p class="price">$24.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                    <div class="card-body"><p class="category">Poleras</p><h3>Polera básica premium</h3><p class="price">$24.990 CLP</p><a class="btn btn-outline" th:href="@{/catalog}">Ver catálogo</a></div>
                 </article>
                 <article class="card product-card">
                     <img src="https://images.unsplash.com/photo-1603251579431-8041402bdeda?auto=format&fit=crop&w=900&q=80" alt="Pantalón de vestir">
-                    <div class="card-body"><p class="category">Pantalones</p><h3>Pantalón de vestir</h3><p class="price">$39.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                    <div class="card-body"><p class="category">Pantalones</p><h3>Pantalón de vestir</h3><p class="price">$39.990 CLP</p><a class="btn btn-outline" th:href="@{/catalog}">Ver catálogo</a></div>
                 </article>
                 <article class="card product-card">
                     <span class="tag tag-offer">Oferta</span>
                     <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=900&q=80" alt="Chaqueta urbana">
-                    <div class="card-body"><p class="category">Chaquetas</p><h3>Chaqueta urbana</h3><p class="price">$49.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                    <div class="card-body"><p class="category">Chaquetas</p><h3>Chaqueta urbana</h3><p class="price">$49.990 CLP</p><a class="btn btn-outline" th:href="@{/catalog}">Ver catálogo</a></div>
                 </article>
                 <article class="card product-card">
                     <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=900&q=80" alt="Parka de invierno">
-                    <div class="card-body"><p class="category">Parkas</p><h3>Parka de invierno</h3><p class="price">$79.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                    <div class="card-body"><p class="category">Parkas</p><h3>Parka de invierno</h3><p class="price">$79.990 CLP</p><a class="btn btn-outline" th:href="@{/catalog}">Ver catálogo</a></div>
                 </article>
                 <article class="card product-card">
                     <span class="tag">Nuevo</span>
                     <img src="https://images.unsplash.com/photo-1564510182791-29645da7fac4?auto=format&fit=crop&w=900&q=80" alt="Traje de baño">
-                    <div class="card-body"><p class="category">Trajes de baño</p><h3>Traje de baño</h3><p class="price">$34.990 CLP</p><button class="btn btn-outline add-cart">Agregar al carrito</button></div>
+                    <div class="card-body"><p class="category">Trajes de baño</p><h3>Traje de baño</h3><p class="price">$34.990 CLP</p><a class="btn btn-outline" th:href="@{/catalog}">Ver catálogo</a></div>
                 </article>
             </div>
         </div>
@@ -102,19 +102,14 @@
     <section class="section newsletter">
         <div class="container newsletter-box">
             <h2>Recibe novedades de Tiendas Urbano</h2>
-            <form id="newsletter-form" novalidate>
-                <label for="newsletter-email" class="sr-only">Correo electrónico</label>
-                <input id="newsletter-email" type="email" placeholder="Ingresa tu correo" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
-            </form>
-            <p id="newsletter-feedback" class="feedback" aria-live="polite"></p>
+            <p class="feedback" aria-live="polite">La suscripción a novedades se habilitará
+                cuando exista el servicio de notificaciones.</p>
         </div>
     </section>
 </main>
 
 <div th:replace="~{fragments/footer :: footer}"></div>
 
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script th:src="@{/js/main.js}"></script>
 </body>
 </html>

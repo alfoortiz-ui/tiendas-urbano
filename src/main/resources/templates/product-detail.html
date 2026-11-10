@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiendas Urbano | product-detail</title>
+    <title>Tiendas Urbano | Producto</title>
     <link rel="stylesheet" th:href="@{/css/main.css}">
 </head>
 <body>
 <div th:replace="~{fragments/topbar :: topbar}"></div>
 <div th:replace="~{fragments/header :: header}"></div>
 <main class="section">
-    <div class="container placeholder-page">
-        <h1>Vista product-detail</h1>
-        <p>Esta vista queda preparada como base visual para el próximo incremento.</p>
+    <div class="container placeholder-page" th:if="${product == null}">
+        <h1>Detalle de producto</h1>
+        <p>Selecciona un producto desde el catálogo.</p>
+    </div>
+    <div class="container product-detail" th:if="${product != null}">
+        <p class="eyebrow" th:text="${product.category}">Categoría</p>
+        <h1 th:text="${product.name}">Producto</h1>
+        <p th:text="${product.description}">Descripción</p>
+        <p class="price" th:text="${'$' + product.price}">$0</p>
+        <p><strong>Tallas:</strong> <span th:text="${product.sizes}">-</span></p>
+        <p><strong>Colores:</strong> <span th:text="${product.colors}">-</span></p>
+        <p th:text="${product.available ? 'Disponible para consulta' : 'Agotado'}">Disponibilidad</p>
+        <p class="feedback">El carrito y la compra estarán disponibles en una etapa posterior.</p>
     </div>
 </main>
 <div th:replace="~{fragments/footer :: footer}"></div>
