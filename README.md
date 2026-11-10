@@ -29,6 +29,8 @@ mvn test
 - `src/main/resources/templates/fragments/`: fragmentos reutilizables.
 - `src/main/resources/static/css/`: estilos.
 - `src/main/resources/static/js/`: scripts.
+- `docs/ARQUITECTURA.md`: arquitectura, capas y contratos del MVP.
+- `docs/PROMPT_SEMANA_1.md`: tareas, dependencias y criterios de la Semana 1.
 
 Incluye:
 
