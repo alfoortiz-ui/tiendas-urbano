@@ -175,8 +175,22 @@ NotificationSender
 AuditService
 ```
 
-Los métodos concretos se definirán en el PR de arquitectura antes de que otros
-agentes implementen dependencias sobre ellos.
+Implementados en la base de Semana 1:
+
+- `UserRepository`: búsqueda por correo/RUT y persistencia de cuentas.
+- `RoleRepository`: resolución de roles por `RoleName`.
+- `ProductRepository`: consulta pública filtrada por texto, categoría y
+  disponibilidad; solo considera `active` y `publishable`.
+- `CategoryRepository`: categorías persistentes por nombre.
+- `RegisterUserRequest`, `LoginRequest`, `CatalogFilter` y `ProductResponse`.
+- `UserService`: registro validado, BCrypt y asignación exclusiva de
+  `CLIENTE`.
+- `CatalogService`: búsqueda y detalle sin datos internos de importación,
+  margen o bodega.
+
+Los contratos de pago, notificación y auditoría quedan definidos para las
+siguientes iteraciones; no se simulan operaciones que todavía no tienen
+backend.
 
 ## 8. Rutas objetivo
 
@@ -194,8 +208,11 @@ GET /admin
 
 En la Semana 1 se deben ordenar por responsabilidad sin romper las vistas
 existentes. Las rutas administrativas deberán quedar protegidas antes de
-considerarse terminadas. Las rutas de negocio detalladas se acordarán en el
-PR de arquitectura.
+considerarse terminadas. La aplicación local usa H2 en
+`./data/tiendas-urbano` y el perfil `test` usa una base en memoria. Las
+contraseñas se almacenan únicamente como BCrypt. Spring Security protege
+`/admin` con autorización de servidor, habilita CSRF, sesiones y logout. El
+registro público nunca recibe ni acepta un rol desde el formulario.
 
 ## 9. Reglas de integración
 
@@ -222,4 +239,3 @@ La Semana 1 termina cuando:
 - Catálogo, búsqueda y detalle tienen DTO, servicios y repositorios definidos.
 - Las plantillas ya no prometen operaciones que no estén conectadas.
 - Los PR tienen pruebas y fueron revisados por arquitectura y Product Owner.
-
